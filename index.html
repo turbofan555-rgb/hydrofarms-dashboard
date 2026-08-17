@@ -12,7 +12,7 @@
    Theme: Sustainable Agriculture, Light/Clean Palette, High Aesthetics
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@400;500;600;700&family=Montserrat:wght@700&display=swap');
 
 :root {
     /* Color Tokens */
@@ -20,9 +20,9 @@
     --bg-card: #ffffff;
     --border-color: #e2e9e3;
     
-    --primary: #10b981;
-    --primary-hover: #059669;
-    --primary-light: #e6f7f0;
+    --primary: #36999f;
+    --primary-hover: #2d8388;
+    --primary-light: #e6f4f5;
     
     --secondary: #0ea5e9;
     --secondary-hover: #0284c7;
@@ -40,8 +40,8 @@
     --error: #ef4444;
     
     /* Layout & Styling */
-    --font-heading: 'Outfit', 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'HK Grotesk', 'Montserrat', sans-serif;
     --radius-lg: 16px;
     --radius-md: 12px;
     --radius-sm: 8px;
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar Styling */
 .sidebar {
     width: 280px;
-    background-color: var(--bg-card);
+    background-color: #113638;
     border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 24px 24px 0 24px;
     position: sticky;
     top: 0;
-    background-color: var(--bg-card);
+    background-color: #113638;
     z-index: 11;
 }
 
@@ -397,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--border-color);
-    background: var(--bg-card);
+    background: #113638;
 }
 
 .sidebar-header {
@@ -1253,6 +1253,18 @@ html[dir="rtl"], body[dir="rtl"] {
     }
 }
 
+
+/* Sidebar Dark Theme Text Overrides */
+.sidebar { color: #ffffff; }
+.sidebar .logo-text h2 { color: #ffffff; }
+.sidebar .logo-text span { color: #9ab4b5; }
+.sidebar .nav-section-title { color: #9ab4b5; }
+.sidebar .nav-item button { color: #ffffff; }
+.sidebar .nav-item button:hover { background-color: rgba(255, 255, 255, 0.1); color: #ffffff; }
+.sidebar .nav-item.active button { background-color: var(--primary); color: white; border-inline-start: 4px solid var(--accent); }
+.search-box input { background-color: #1b4b4e; color: #ffffff; border-color: #2a696d; }
+.search-box input::placeholder { color: #9ab4b5; }
+
 </style>
     <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 </head>
@@ -1268,7 +1280,7 @@ html[dir="rtl"], body[dir="rtl"] {
         <aside class="sidebar">
             <div class="sidebar-header-area">
                 <div class="logo-container">
-                    <div class="logo-icon">🌱</div>
+                    <img src="assets/hydrofarms_logo.webp" alt="Hydrofarms Logo" style="width: 40px; height: 40px; border-radius: var(--radius-md); object-fit: contain; background: white; padding: 2px;">
                     <div class="logo-text">
                         <h2>هايدرو فارمز</h2>
                         <span>HYDROFARMS</span>
@@ -1512,21 +1524,21 @@ html[dir="rtl"], body[dir="rtl"] {
 
             <!-- METHOD STATEMENTS TAB -->
             <div id="method-statements-tab" class="tab-content">
-                <div class="panel" style="margin-bottom: 24px; background: linear-gradient(135deg, #fff, #f0f7f3); border-left: 6px solid #2e7d32;">
-                    <h2 style="font-size: 24px; color: #2e7d32; margin-bottom: 8px;">📑 مستندات طرق التنفيذ — Method Statements</h2>
+                <div class="panel" style="margin-bottom: 24px; background: linear-gradient(135deg, #fff, #f0f7f3); border-left: 6px solid #36999f;">
+                    <h2 style="font-size: 24px; color: #36999f; margin-bottom: 8px;">📑 مستندات طرق التنفيذ — Method Statements</h2>
                     <p style="color: #666; font-size: 14px;">15 مستند تفصيلي يغطي كل مراحل تنفيذ المشروع من المساحة حتى التشغيل</p>
                 </div>
 
                 <!-- Master Document -->
-                <div class="panel" style="margin-bottom: 20px; border: 2px solid #2e7d32;">
-                    <h3 style="color: #2e7d32; margin-bottom: 12px;">📋 المستند الرئيسي — Master Construction Method Statement</h3>
+                <div class="panel" style="margin-bottom: 20px; border: 2px solid #36999f;">
+                    <h3 style="color: #36999f; margin-bottom: 12px;">📋 المستند الرئيسي — Master Construction Method Statement</h3>
                     <div style="display: flex; align-items: center; gap: 12px; padding: 12px; background: #f5f5f5; border-radius: 8px;">
                         <span style="font-size: 28px;">📄</span>
                         <div style="flex: 1;">
                             <strong>Hydrofarms_Master_Construction_Method_Statement_EN.pdf</strong>
                             <p style="color: #888; font-size: 13px; margin: 4px 0 0;">الخطة الرئيسية لتسلسل التنفيذ والسلامة وإدارة الجودة</p>
                         </div>
-                        <a href="method_statements/Hydrofarms_Master_Construction_Method_Statement_EN.pdf" target="_blank" style="padding: 8px 20px; background: #2e7d32; color: white; border-radius: 6px; text-decoration: none; font-size: 14px;">فتح PDF</a>
+                        <a href="method_statements/Hydrofarms_Master_Construction_Method_Statement_EN.pdf" target="_blank" style="padding: 8px 20px; background: #36999f; color: white; border-radius: 6px; text-decoration: none; font-size: 14px;">فتح PDF</a>
                     </div>
                 </div>
 
@@ -1538,7 +1550,7 @@ html[dir="rtl"], body[dir="rtl"] {
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">📐</span>
                             <div style="flex:1"><strong>01. أعمال المساحة والتوقيع</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-GEN-002 — Survey, Setting Out</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-GEN-002_Survey_Setting_Out_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
@@ -1566,7 +1578,7 @@ html[dir="rtl"], body[dir="rtl"] {
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">🔧</span>
                             <div style="flex:1"><strong>05. المرافق المدفونة</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-CIV-004 — Buried Utilities</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-CIV-004_Buried_Utilities_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
@@ -1587,7 +1599,7 @@ html[dir="rtl"], body[dir="rtl"] {
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">❄️</span>
                             <div style="flex:1"><strong>08. التبريد والتهوية</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-CLM-001 — Cooling, Ventilation</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-CLM-001_Cooling_Ventilation_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
@@ -1601,35 +1613,35 @@ html[dir="rtl"], body[dir="rtl"] {
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">🌿</span>
                             <div style="flex:1"><strong>10. صوبة الخدمة والإنبات والتعبئة</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-SRV-001 — Service GH, Germination, Packing</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-SRV-001_Service_Greenhouse_Germination_Packing_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">💧</span>
                             <div style="flex:1"><strong>11. محطة معالجة المياه الجوفية</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-WTR-001 — Groundwater WTP</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-WTR-001_Groundwater_WTP_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">🧪</span>
                             <div style="flex:1"><strong>12. التسميد والمحاليل المركزة</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-FER-001 — Fertigation, Stock Solutions</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-FER-001_Fertigation_Stock_Solutions_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">⚡</span>
                             <div style="flex:1"><strong>13. الكهرباء والتأريض والمولد</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-ELC-001 — Electrical, Power, Earthing, Generator</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-ELC-001_Electrical_Power_Earthing_Generator_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
                         <div class="ms-card" style="display:flex; align-items:center; gap:12px; padding:14px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0;">
                             <span style="font-size:24px">🤖</span>
                             <div style="flex:1"><strong>14. التحكم الآلي والحساسات</strong><br><span style="color:#888; font-size:13px">HF-GH01-MST-AUT-001 — Automation, Sensors, Controls</span></div>
-                            <span style="color:#2e7d32; font-weight:bold;">✅</span>
+                            <span style="color:#36999f; font-weight:bold;">✅</span>
                             <a href="method_statements/HF-GH01-MST-AUT-001_Automation_Sensors_Controls_EN.pdf" target="_blank" style="padding:6px 16px; background:#1565c0; color:white; border-radius:6px; text-decoration:none; font-size:13px;">PDF</a>
                         </div>
 
@@ -1650,15 +1662,15 @@ html[dir="rtl"], body[dir="rtl"] {
                         <div style="font-size: 13px; color: #888;">الحمل المتصل الكلي</div>
                         <div style="font-size: 32px; font-weight: bold; color: #e65100;">112.7 kW</div>
                     </div>
-                    <div class="panel" style="text-align: center; border-top: 4px solid #2e7d32;">
+                    <div class="panel" style="text-align: center; border-top: 4px solid #36999f;">
                         <div style="font-size: 13px; color: #888;">حمل الطلب الفعلي</div>
-                        <div style="font-size: 32px; font-weight: bold; color: #2e7d32;">84.1 kW</div>
+                        <div style="font-size: 32px; font-weight: bold; color: #36999f;">84.1 kW</div>
                         <div style="font-size: 12px; color: #888;">91.4 kVA @ PF 0.92</div>
                     </div>
                     <div class="panel" style="text-align: center; border-top: 4px solid #1565c0;">
                         <div style="font-size: 13px; color: #888;">المولد (EL-003)</div>
                         <div style="font-size: 32px; font-weight: bold; color: #1565c0;">150 kVA</div>
-                        <div style="font-size: 12px; color: #2e7d32;">✅ كافي (استغلال 61%)</div>
+                        <div style="font-size: 12px; color: #36999f;">✅ كافي (استغلال 61%)</div>
                     </div>
                     <div class="panel" style="text-align: center; border-top: 4px solid #7b1fa2;">
                         <div style="font-size: 13px; color: #888;">معامل الطلب</div>
@@ -1682,7 +1694,7 @@ html[dir="rtl"], body[dir="rtl"] {
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px;">❄️ تشيلرات تبريد المحلول</td><td style="padding:10px; text-align:center;">4</td><td style="padding:10px; text-align:center;">36.0 kW</td><td style="padding:10px; text-align:center;">80%</td><td style="padding:10px; text-align:center; font-weight:bold;">28.8 kW</td><td style="padding:10px;"><div style="background:#e3f2fd; border-radius:4px; height:20px; width:100%;"><div style="background:#1565c0; border-radius:4px; height:100%; width:34%;"></div></div></td></tr>
-                            <tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px;">🌀 مراوح شفط وتهوية</td><td style="padding:10px; text-align:center;">32</td><td style="padding:10px; text-align:center;">19.7 kW</td><td style="padding:10px; text-align:center;">—</td><td style="padding:10px; text-align:center; font-weight:bold;">17.9 kW</td><td style="padding:10px;"><div style="background:#e8f5e9; border-radius:4px; height:20px; width:100%;"><div style="background:#2e7d32; border-radius:4px; height:100%; width:21%;"></div></div></td></tr>
+                            <tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px;">🌀 مراوح شفط وتهوية</td><td style="padding:10px; text-align:center;">32</td><td style="padding:10px; text-align:center;">19.7 kW</td><td style="padding:10px; text-align:center;">—</td><td style="padding:10px; text-align:center; font-weight:bold;">17.9 kW</td><td style="padding:10px;"><div style="background:#e8f5e9; border-radius:4px; height:20px; width:100%;"><div style="background:#36999f; border-radius:4px; height:100%; width:21%;"></div></div></td></tr>
                             <tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px;">🌊 طلمبات تبريد (Pads)</td><td style="padding:10px; text-align:center;">14</td><td style="padding:10px; text-align:center;">17.8 kW</td><td style="padding:10px; text-align:center;">—</td><td style="padding:10px; text-align:center; font-weight:bold;">13.0 kW</td><td style="padding:10px;"><div style="background:#e0f7fa; border-radius:4px; height:20px; width:100%;"><div style="background:#00838f; border-radius:4px; height:100%; width:16%;"></div></div></td></tr>
                             <tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px;">💡 إنارة</td><td style="padding:10px; text-align:center;">244</td><td style="padding:10px; text-align:center;">12.7 kW</td><td style="padding:10px; text-align:center;">—</td><td style="padding:10px; text-align:center; font-weight:bold;">9.7 kW</td><td style="padding:10px;"><div style="background:#fff8e1; border-radius:4px; height:20px; width:100%;"><div style="background:#f9a825; border-radius:4px; height:100%; width:12%;"></div></div></td></tr>
                             <tr style="border-bottom: 1px solid #eee;"><td style="padding: 10px;">💧 طلمبات NFT</td><td style="padding:10px; text-align:center;">4</td><td style="padding:10px; text-align:center;">8.6 kW</td><td style="padding:10px; text-align:center;">75%</td><td style="padding:10px; text-align:center; font-weight:bold;">6.3 kW</td><td style="padding:10px;"><div style="background:#e8eaf6; border-radius:4px; height:20px; width:100%;"><div style="background:#3f51b5; border-radius:4px; height:100%; width:7%;"></div></div></td></tr>
@@ -1731,13 +1743,13 @@ html[dir="rtl"], body[dir="rtl"] {
                 </div>
 
                 <!-- Equipment Sizing -->
-                <div class="panel" style="background: #e8f5e9; border-left: 4px solid #2e7d32;">
-                    <h3 style="color: #2e7d32; margin-bottom: 12px;">✅ تحقق تحجيم المعدات</h3>
+                <div class="panel" style="background: #e8f5e9; border-left: 4px solid #36999f;">
+                    <h3 style="color: #36999f; margin-bottom: 12px;">✅ تحقق تحجيم المعدات</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
                         <div style="padding: 12px; background: white; border-radius: 8px;">
                             <strong>المولد 150 kVA</strong>
                             <div style="margin-top:8px; background:#e0e0e0; border-radius:4px; height:24px; position:relative;">
-                                <div style="background:#2e7d32; border-radius:4px; height:100%; width:61%; display:flex; align-items:center; justify-content:center; color:white; font-size:12px; font-weight:bold;">61%</div>
+                                <div style="background:#36999f; border-radius:4px; height:100%; width:61%; display:flex; align-items:center; justify-content:center; color:white; font-size:12px; font-weight:bold;">61%</div>
                             </div>
                             <div style="color:#888; font-size:12px; margin-top:4px;">91.4 / 150 kVA — هامش أمان 39%</div>
                         </div>
