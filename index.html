@@ -1616,10 +1616,158 @@ html[dir="rtl"], body[dir="rtl"] {
 
                 <!-- Sub-Navigation Buttons Bar -->
                 <div class="sub-prop-btn-bar" style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button class="btn-primary" onclick="showSubProposal('prop-eur-hightech')" id="btn-prop-eur-hightech" style="padding: 10px 18px; font-weight: bold; background: #113638; color: #f5a623; border: 1px solid #f5a623; border-radius: 8px;">🇪🇺 <span class="txt-ar">العرض الأوروبي المتقدم (High-Tech)</span><span class="txt-en" style="display:none;">European High-Tech Proposal</span></button>
                     <button class="btn-primary" onclick="showSubProposal('prop-tech-exec')" id="btn-prop-tech-exec" style="padding: 10px 18px; font-weight: bold; background: #36999f; color: white; border: none; border-radius: 8px;">📘 <span class="txt-ar">عرض فني مختصر</span><span class="txt-en" style="display:none;">Executive Tech Proposal</span></button>
                     <button class="btn-secondary" onclick="showSubProposal('prop-tech-detail')" id="btn-prop-tech-detail" style="padding: 10px 18px; font-weight: bold; background: white; color: #334155; border: 1px solid #cbd5e1; border-radius: 8px;">📗 <span class="txt-ar">عرض فني تفصيلي</span><span class="txt-en" style="display:none;">Detailed Tech Proposal</span></button>
                     <button class="btn-secondary" onclick="showSubProposal('prop-fin-exec')" id="btn-prop-fin-exec" style="padding: 10px 18px; font-weight: bold; background: white; color: #334155; border: 1px solid #cbd5e1; border-radius: 8px;">📙 <span class="txt-ar">عرض مالي مختصر</span><span class="txt-en" style="display:none;">Executive Financial Proposal</span></button>
                     <button class="btn-secondary" onclick="showSubProposal('prop-fin-detail')" id="btn-prop-fin-detail" style="padding: 10px 18px; font-weight: bold; background: white; color: #334155; border: 1px solid #cbd5e1; border-radius: 8px;">📕 <span class="txt-ar">عرض سعر تفصيلي (بيع)</span><span class="txt-en" style="display:none;">Itemized Commercial Price Offer</span></button>
+                </div>
+
+                <!-- 0. European High-Tech Proposal Standard -->
+                <div id="prop-eur-hightech" class="sub-proposal-content" style="display: block;">
+                    <div class="panel" style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-top: 4px solid #113638;">
+                        <div class="txt-ar">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e6f4f5; padding-bottom: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div>
+                                    <h2 style="color: #113638; margin: 0; font-size: 22px;">🇪🇺 العرض الهندسي والمالي طبقاً للمعايير الأوروبية والهولندية</h2>
+                                    <span style="color: #36999f; font-weight: bold; font-size: 13px;">European High-Tech Greenhouse Turnkey Standard (EN 13031-1 / Eurocode 3)</span>
+                                </div>
+                                <span style="background: #113638; color: #f5a623; padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 13px;">Ref: EUR-HF-2026-GH01</span>
+                            </div>
+
+                            <!-- KPIs Cards -->
+                            <h3 style="margin-bottom: 14px; color: #113638;">🎯 مؤشرات الأداء والضمانات الزراعية (Guaranteed Agronomic KPIs)</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 24px;">
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-right: 4px solid #36999f;">
+                                    <div style="color: #64748b; font-size: 12px;">الطاقة الإنتاجية المؤكدة</div>
+                                    <strong style="font-size: 18px; color: #0f172a;">420,000 – 460,000 رأس</strong>
+                                    <div style="color: #36999f; font-size: 11px; margin-top: 2px;">96 رأس/م² سنوياً</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-right: 4px solid #2ea66a;">
+                                    <div style="color: #64748b; font-size: 12px;">كفاءة التبريد (Delta T)</div>
+                                    <strong style="font-size: 18px; color: #2ea66a;">10.0°C – 12.5°C انخفاض</strong>
+                                    <div style="color: #2ea66a; font-size: 11px; margin-top: 2px;">بادات CELdek 2.0م × 125م</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-right: 4px solid #f5a623;">
+                                    <div style="color: #64748b; font-size: 12px;">تجانس المناخ الداخلي</div>
+                                    <strong style="font-size: 18px; color: #f5a623;">≥ 93% Uniformity</strong>
+                                    <div style="color: #f5a623; font-size: 11px; margin-top: 2px;">12 مروحة شفط + 14 مروحة HAF</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-right: 4px solid #1565c0;">
+                                    <div style="color: #64748b; font-size: 12px;">دقة التسميد وحموضة PH</div>
+                                    <strong style="font-size: 18px; color: #1565c0;">± 0.05 EC / ± 0.1 pH</strong>
+                                    <div style="color: #1565c0; font-size: 11px; margin-top: 2px;">Geneina FertiOne مغلق</div>
+                                </div>
+                            </div>
+
+                            <!-- Battery Limits Matrix -->
+                            <h3 style="margin-bottom: 14px; color: #113638;">📋 مصفوفة حدود المسؤولية والربط (Battery Limits Matrix)</h3>
+                            <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 13px;">
+                                <thead>
+                                    <tr style="background: #f1f5f9; text-align: right;">
+                                        <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">البند / الأعمال</th>
+                                        <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">نطاق مقاول EPC (Hydrofarms)</th>
+                                        <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">نطاق العميل (Client Scope)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">التصاميم والاعتمادات الهندسية</td><td style="padding: 10px; color: #2ea66a; font-weight: bold;">✅ توريد كافة التصاميم المعتمدة</td><td style="padding: 10px; color: #94a3b8;">❌ الاعتماد من الجهات المحلية</td></tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">التوريدات والتركيبات الكهروميكانيكية</td><td style="padding: 10px; color: #2ea66a; font-weight: bold;">✅ توريد وتركيب وتدشين 100%</td><td style="padding: 10px; color: #94a3b8;">❌ -</td></tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">تمهيد وتسوية أرض الموقع</td><td style="padding: 10px; color: #94a3b8;">❌ -</td><td style="padding: 10px; color: #36999f; font-weight: bold;">✅ تسوية الموقع بميول 1% المحددة</td></tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">مصدر المياه وتغذية الكهرباء الرئيسية</td><td style="padding: 10px; color: #94a3b8;">❌ -</td><td style="padding: 10px; color: #36999f; font-weight: bold;">✅ توصيل المياه والكهرباء لمدخل الموقع</td></tr>
+                                </tbody>
+                            </table>
+
+                            <!-- OPEX Table -->
+                            <h3 style="margin-bottom: 14px; color: #113638;">💶 تحليل التكلفة التشغيلية لكل رأس خس (OPEX Analysis)</h3>
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+                                    <div>⚡ **الطاقة والكهرباء:** 1.80 – 2.20 ج.م/رأس</div>
+                                    <div>🧪 **الأسمدة والمحاليل:** 1.20 – 1.50 ج.م/رأس</div>
+                                    <div>💧 **المياه والمعالجة:** 0.30 – 0.50 ج.م/رأس</div>
+                                    <div>🌱 **البذور وبيئة النمو:** 0.80 – 1.00 ج.م/رأس</div>
+                                    <div>👷 **العمالة والإشراف:** 1.50 – 1.80 ج.م/رأس</div>
+                                    <div>📦 **التعبئة والتغليف:** 1.00 – 1.20 ج.م/رأس</div>
+                                </div>
+                                <hr style="margin: 12px 0; border: none; border-top: 1px solid #cbd5e1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                                    <strong style="color: #0f172a; font-size: 15px;">إجمالي التكلفة التشغيلية المباشرة (Direct OPEX): 6.60 – 8.20 ج.م / رأس</strong>
+                                    <span style="background: #dcfce7; color: #15803d; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 13px;">هامش ربح تشغيلي متوقع: 60% – 68%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="txt-en" style="display:none; direction: ltr; text-align: left;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e6f4f5; padding-bottom: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+                                <div>
+                                    <h2 style="color: #113638; margin: 0; font-size: 22px;">🇪🇺 European High-Tech Greenhouse Turnkey Standard</h2>
+                                    <span style="color: #36999f; font-weight: bold; font-size: 13px;">Dutch & European Engineering Compliance (EN 13031-1 / Eurocode 3)</span>
+                                </div>
+                                <span style="background: #113638; color: #f5a623; padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 13px;">Ref: EUR-HF-2026-GH01</span>
+                            </div>
+
+                            <!-- KPIs Cards -->
+                            <h3 style="margin-bottom: 14px; color: #113638;">🎯 Guaranteed Agronomic & Performance KPIs</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 24px;">
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-left: 4px solid #36999f;">
+                                    <div style="color: #64748b; font-size: 12px;">Guaranteed Capacity</div>
+                                    <strong style="font-size: 18px; color: #0f172a;">420,000 – 460,000 Heads</strong>
+                                    <div style="color: #36999f; font-size: 11px; margin-top: 2px;">96 heads/m²/year</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-left: 4px solid #2ea66a;">
+                                    <div style="color: #64748b; font-size: 12px;">Cooling Delta T</div>
+                                    <strong style="font-size: 18px; color: #2ea66a;">10.0°C – 12.5°C Drop</strong>
+                                    <div style="color: #2ea66a; font-size: 11px; margin-top: 2px;">CELdek 2.0m×125m pads</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-left: 4px solid #f5a623;">
+                                    <div style="color: #64748b; font-size: 12px;">Climate Uniformity</div>
+                                    <strong style="font-size: 18px; color: #f5a623;">≥ 93% Uniformity</strong>
+                                    <div style="color: #f5a623; font-size: 11px; margin-top: 2px;">12 fans + 14 HAF fans</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 14px; border-radius: 8px; border-left: 4px solid #1565c0;">
+                                    <div style="color: #64748b; font-size: 12px;">Fertigation & pH Precision</div>
+                                    <strong style="font-size: 18px; color: #1565c0;">± 0.05 EC / ± 0.1 pH</strong>
+                                    <div style="color: #1565c0; font-size: 11px; margin-top: 2px;">FertiOne Closed Loop</div>
+                                </div>
+                            </div>
+
+                            <!-- Battery Limits Matrix -->
+                            <h3 style="margin-bottom: 14px; color: #113638;">📋 Battery Limits & Responsibility Matrix</h3>
+                            <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 13px;">
+                                <thead>
+                                    <tr style="background: #f1f5f9; text-align: left;">
+                                        <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">Scope Item</th>
+                                        <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">EPC Contractor Scope (Hydrofarms)</th>
+                                        <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">Client Scope</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">Engineering Designs & Specs</td><td style="padding: 10px; color: #2ea66a; font-weight: bold;">✅ 100% Turnkey Engineering</td><td style="padding: 10px; color: #94a3b8;">❌ Local Statutory Approvals</td></tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">MEP & NFT Supply & Erection</td><td style="padding: 10px; color: #2ea66a; font-weight: bold;">✅ Supply, Install & Commission</td><td style="padding: 10px; color: #94a3b8;">❌ -</td></tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">Site Earthworks & Grading</td><td style="padding: 10px; color: #94a3b8;">❌ -</td><td style="padding: 10px; color: #36999f; font-weight: bold;">✅ Land Leveling at 1.0% Slope</td></tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px;">Main Power & Fresh Water Utility</td><td style="padding: 10px; color: #94a3b8;">❌ -</td><td style="padding: 10px; color: #36999f; font-weight: bold;">✅ Power & Water Connection to Boundary</td></tr>
+                                </tbody>
+                            </table>
+
+                            <!-- OPEX Table -->
+                            <h3 style="margin-bottom: 14px; color: #113638;">💶 Operational Cost Analysis per Lettuce Head (OPEX)</h3>
+                            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; font-size: 13px;">
+                                    <div>⚡ **Electricity & Power:** 1.80 – 2.20 EGP/head</div>
+                                    <div>🧪 **Fertilizers & Minerals:** 1.20 – 1.50 EGP/head</div>
+                                    <div>💧 **Water & RO Treatment:** 0.30 – 0.50 EGP/head</div>
+                                    <div>🌱 **Seeds & Rockwool Media:** 0.80 – 1.00 EGP/head</div>
+                                    <div>👷 **Labor & Operation:** 1.50 – 1.80 EGP/head</div>
+                                    <div>📦 **Packaging & Boxes:** 1.00 – 1.20 EGP/head</div>
+                                </div>
+                                <hr style="margin: 12px 0; border: none; border-top: 1px solid #cbd5e1;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                                    <strong style="color: #0f172a; font-size: 15px;">Total Direct Operational Cost (OPEX): 6.60 – 8.20 EGP / Head</strong>
+                                    <span style="background: #dcfce7; color: #15803d; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 13px;">Expected Operational Margin: 60% – 68%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 1. Technical Executive Proposal -->
@@ -14428,6 +14576,7 @@ function showSubProposal(subId) {
     if (target) target.style.display = 'block';
 
     const btnMap = {
+        'prop-eur-hightech': 'btn-prop-eur-hightech',
         'prop-tech-exec': 'btn-prop-tech-exec',
         'prop-tech-detail': 'btn-prop-tech-detail',
         'prop-fin-exec': 'btn-prop-fin-exec',
@@ -14440,14 +14589,21 @@ function showSubProposal(subId) {
             b.style.background = 'white';
             b.style.color = '#334155';
             b.style.border = '1px solid #cbd5e1';
+            b.style.color = '#334155';
         }
     });
 
     const activeBtn = document.getElementById(btnMap[subId]);
     if (activeBtn) {
+        if (subId === 'prop-eur-hightech') {
+            activeBtn.style.background = '#113638';
+            activeBtn.style.color = '#f5a623';
+            activeBtn.style.border = '1px solid #f5a623';
+        } else {
         activeBtn.style.background = '#36999f';
         activeBtn.style.color = 'white';
         activeBtn.style.border = 'none';
+        }
     }
 }
 
