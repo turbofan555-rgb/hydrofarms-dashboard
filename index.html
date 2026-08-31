@@ -14085,18 +14085,7 @@ function exportFullReportPDF() {
 }
 
 
-function showSubProposal(subId) {
-    document.querySelectorAll('.sub-proposal-content').forEach(el => el.style.display = 'none');
-    const target = document.getElementById(subId);
-    if (target) target.style.display = 'block';
-
-    const btnMap = {
-        'prop-eur-hightech': 'btn-prop-eur-hightech',
-        'prop-tech-exec': 'btn-prop-tech-exec',
-        'prop-tech-detail': 'btn-prop-tech-detail',
-        'prop-fin-exec': 'btn-prop-fin-exec',
-        'prop-fin-detail': 'btn-prop-fin-detail'
-    };
+;
 
     Object.values(btnMap).forEach(bId => {
         const b = document.getElementById(bId);
@@ -14124,18 +14113,7 @@ function showSubProposal(subId) {
 
 
 let propLang = 'ar';
-function toggleProposalLang() {
-    propLang = (propLang === 'ar') ? 'en' : 'ar';
-    const arEls = document.querySelectorAll('#proposals-tab .txt-ar');
-    const enEls = document.querySelectorAll('#proposals-tab .txt-en');
-    
-    if (propLang === 'en') {
-        arEls.forEach(el => el.style.display = 'none');
-        enEls.forEach(el => el.style.display = 'block');
-        document.getElementById('prop-lang-btn-text').innerText = 'النسخة العربية (Arabic)';
-        document.getElementById('prop-main-title').innerText = '📜 Hydrofarms Turnkey EPC Proposals Package';
-        document.getElementById('prop-main-subtitle').innerText = 'Customized Technical & Commercial Financial Proposals (20% Commercial Selling Price Included)';
-    } else {
+ else {
         enEls.forEach(el => el.style.display = 'none');
         arEls.forEach(el => el.style.display = 'block');
         document.getElementById('prop-lang-btn-text').innerText = 'English Version';
