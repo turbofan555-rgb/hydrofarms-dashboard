@@ -1362,6 +1362,12 @@ html[dir="rtl"], body[dir="rtl"] {
                             <span id="text-overview">لوحة التحكم الرئيسية</span>
                         </button>
                     </li>
+                    <li class="nav-item" id="nav-euro-comparison">
+                        <button onclick="loadTab('euro-comparison')">
+                            <span style="font-size: 16px;">📊</span>
+                            <span id="text-euro-comparison">مقارنة العروض الأوروبية</span>
+                        </button>
+                    </li>
                     <li class="nav-item" id="nav-proposals">
                         <button onclick="loadTab('proposals')">
                             <span style="font-size: 16px;">📜</span>
@@ -1585,6 +1591,102 @@ html[dir="rtl"], body[dir="rtl"] {
                 </div>
             </div>
 
+            <!-- EUROPEAN BENCHMARK COMPARISON TAB -->
+            <div id="euro-comparison-tab" class="tab-content">
+                <div class="panel" style="margin-bottom: 24px; background: linear-gradient(135deg, #113638, #1e293b); color: white; border-left: 6px solid #f5a623;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                        <div>
+                            <h2 style="font-size: 24px; color: #f5a623; margin-bottom: 8px;">📊 الدراسة الاستشارية لمقارنة العروض الأوروبية الـ 5</h2>
+                            <p style="color: #cbd5e1; font-size: 14px;">تحليل فني ومالي دقيق للعروض الإسبانية والأوروبية (Novagric, ININSA, Fertri) والتموضع الاستراتيجي لـ Hydrofarms</p>
+                        </div>
+                        <span style="background: rgba(245, 166, 35, 0.2); border: 1px solid #f5a623; color: #f5a623; padding: 6px 14px; border-radius: 20px; font-weight: bold; font-size: 13px;">Source: E:\Desktop_Files\doc\hydrofarm\عروض</span>
+                    </div>
+                </div>
+
+                <!-- 5 Offers Comparison Grid Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 24px;">
+                    <div class="panel" style="text-align: center; border-top: 4px solid #64748b; background: white;">
+                        <div style="font-size: 12px; color: #64748b;">FERTRI (إسبانيا — أساسي)</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #475569; margin: 6px 0;">€188,797</div>
+                        <div style="font-size: 13px; color: #64748b;">€46.82 / م² (Ex-Works)</div>
+                        <div style="font-size: 11px; color: #ef4444; margin-top: 4px;">❌ يفتقد التسميد والزراعة المائية</div>
+                    </div>
+                    <div class="panel" style="text-align: center; border-top: 4px solid #0ea5e9; background: white;">
+                        <div style="font-size: 12px; color: #64748b;">NOVAGRIC (طماطم)</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #0ea5e9; margin: 6px 0;">€332,046</div>
+                        <div style="font-size: 13px; color: #64748b;">€82.36 / م² (CIP Alex)</div>
+                        <div style="font-size: 11px; color: #0ea5e9; margin-top: 4px;">تقييم ممتاز للطماطم (8.68/10)</div>
+                    </div>
+                    <div class="panel" style="text-align: center; border-top: 4px solid #2ea66a; background: white;">
+                        <div style="font-size: 12px; color: #64748b;">NOVAGRIC (خس NFT) 🏆</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #2ea66a; margin: 6px 0;">€450,687</div>
+                        <div style="font-size: 13px; color: #64748b;">€111.78 / م² (CIP Alex)</div>
+                        <div style="font-size: 11px; color: #15803d; font-weight: bold; margin-top: 4px;">🏆 أعلى تقييم فني (8.92/10)</div>
+                    </div>
+                    <div class="panel" style="text-align: center; border-top: 4px solid #f5a623; background: white;">
+                        <div style="font-size: 12px; color: #64748b;">ININSA (خس NFT)</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #f5a623; margin: 6px 0;">€552,866</div>
+                        <div style="font-size: 13px; color: #64748b;">€126.57 / م² (Ex-Shipping)</div>
+                        <div style="font-size: 11px; color: #d97706; margin-top: 4px;">جودة عالية لكن سعر مرتفع جداً</div>
+                    </div>
+                    <div class="panel" style="text-align: center; border-top: 4px solid #36999f; background: #e6f4f5;">
+                        <div style="font-size: 12px; color: #113638; font-weight: bold;">HYDROFARMS EPC (تسليم مفتاح)</div>
+                        <div style="font-size: 24px; font-weight: bold; color: #36999f; margin: 6px 0;">34.84M EGP</div>
+                        <div style="font-size: 13px; color: #113638; font-weight: bold;">~ $700,000 Turnkey</div>
+                        <div style="font-size: 11px; color: #15803d; font-weight: bold; margin-top: 4px;">✅ شامل المدني والتركيب والمولد</div>
+                    </div>
+                </div>
+
+                <!-- Comparison Matrix Table -->
+                <div class="panel" style="margin-bottom: 24px; overflow-x: auto; background: white;">
+                    <h3 style="margin-bottom: 16px; color: #113638;">📋 مصفوفة المقارنة الفنية والمالية التفصيلية</h3>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+                        <thead>
+                            <tr style="background: #f1f5f9; text-align: right;">
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">بند النظام</th>
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">FERTRI</th>
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">ININSA (طماطم)</th>
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">ININSA (خس NFT)</th>
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">NOVAGRIC (طماطم)</th>
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1;">NOVAGRIC (خس NFT)</th>
+                                <th style="padding: 10px; border-bottom: 2px solid #cbd5e1; background: #e6f4f5; color: #113638;">HYDROFARMS EPC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px; font-weight: bold;">الهيكل والتغطية</td><td style="padding: 10px;">€112,450</td><td style="padding: 10px;">€123,623</td><td style="padding: 10px;">€138,500</td><td style="padding: 10px;">€88,860</td><td style="padding: 10px;">€88,860</td><td style="padding: 10px; background: #f0fdf4; font-weight: bold; color: #166534;">IncoSteel HDG Z275</td></tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px; font-weight: bold;">الستائر الحرارية</td><td style="padding: 10px;">متضمن</td><td style="padding: 10px;">€29,997</td><td style="padding: 10px;">€34,500</td><td style="padding: 10px;">€20,452</td><td style="padding: 10px;">€20,452</td><td style="padding: 10px; background: #f0fdf4; font-weight: bold; color: #166534;">Svensson Harmony 3647</td></tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px; font-weight: bold;">التبريد والتهوية</td><td style="padding: 10px;">30 مروحة</td><td style="padding: 10px;">متضمن</td><td style="padding: 10px;">متضمن</td><td style="padding: 10px;">21 مروحة</td><td style="padding: 10px;">21 مروحة</td><td style="padding: 10px; background: #f0fdf4; font-weight: bold; color: #166534;">12 مروحة 140سم + بادات 125م</td></tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px; font-weight: bold;">أنظمة NFT والتسميد</td><td style="padding: 10px; color: #ef4444;">❌ غير متضمن</td><td style="padding: 10px;">€24,615 (طماطم)</td><td style="padding: 10px;">€153,500 (NFT)</td><td style="padding: 10px;">€18,853 (طماطم)</td><td style="padding: 10px;">€147,140 (NFT)</td><td style="padding: 10px; background: #f0fdf4; font-weight: bold; color: #166534;">78 ترابيزة + FertiOne + RO 5م³</td></tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px; font-weight: bold;">التحكم والكهرباء</td><td style="padding: 10px;">أساسي</td><td style="padding: 10px;">€55,197</td><td style="padding: 10px;">€58,000</td><td style="padding: 10px;">€9,853</td><td style="padding: 10px;">€9,853</td><td style="padding: 10px; background: #f0fdf4; font-weight: bold; color: #166534;">لوحة MDB + مولد 150kVA+ATS</td></tr>
+                            <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 10px; font-weight: bold;">التركيب والأعمال المدنية</td><td style="padding: 10px; color: #ef4444;">❌ مستثنى</td><td style="padding: 10px; color: #ef4444;">❌ مستثنى</td><td style="padding: 10px; color: #ef4444;">❌ مستثنى</td><td style="padding: 10px; color: #ef4444;">❌ مستثنى</td><td style="padding: 10px; color: #ef4444;">❌ مستثنى</td><td style="padding: 10px; background: #f0fdf4; font-weight: bold; color: #166534;">✅ متضمن 100% تسليم مفتاح</td></tr>
+                            <tr style="background: #f8fafc; font-weight: bold;"><td style="padding: 12px;">إجمالي الإسناد (€)</td><td style="padding: 12px;">€188,797</td><td style="padding: 12px;">€465,990</td><td style="padding: 12px;">€552,866</td><td style="padding: 12px;">€332,046</td><td style="padding: 12px; color: #15803d;">€450,687</td><td style="padding: 12px; background: #e6f4f5; color: #113638; font-size: 15px;">34.84M EGP (Turnkey)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Hidden Risks & Exclusions Panel -->
+                <div class="panel" style="background: #fffbebf7; border-left: 5px solid #f5a623; margin-bottom: 24px;">
+                    <h3 style="color: #b45309; margin-bottom: 12px;">⚠️ التكاليف الخفية والاستثناءات الحرجة في العروض الأوروبية</h3>
+                    <p style="color: #78350f; font-size: 13px; margin-bottom: 14px;">أوضحت الدراسة الاستشارية أن كافة العروض الأوروبية المستوردة (Novagric / ININSA / Fertri) تحذف البنود الأساسية التالية، مما يضيف تكلفة لا تقل عن 20-30% على التكلفة المعلنة:</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; font-size: 13px; color: #451a03;">
+                        <div>• 🚜 **الأعمال المدنية والخرسانات:** مستثناة كلياً من كافة العروض الإسبانية.</div>
+                        <div>• 👷 **عمالة التركيب والمعدات:** العروض توفر مشرفاً فقط وتستثني عمالة التركيب والونش.</div>
+                        <div>• ⚡ **المولد الكهربائي والكابلات:** مستثناة كلياً وتتطلب تغذية خارجية جاهزة.</div>
+                        <div>• 💧 **محطة تحلية المياه RO الخزانات:** مستثناة من معظم العروض كبند توريد.</div>
+                    </div>
+                </div>
+
+                <!-- Action Button for Full Report -->
+                <div style="padding: 16px; background: white; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                    <div>
+                        <strong style="color: #113638; font-size: 16px;">📄 المستند الاستشاري الكامل لمقارنة العروض الأوروبية (Markdown)</strong>
+                        <div style="color: #64748b; font-size: 13px;">يتضمن تقييم الأوزان (Scoring Model)، تحليل المخاطر، والتموضع الاستراتيجي.</div>
+                    </div>
+                    <a href="european_offers_consultant_comparison.md" target="_blank" class="btn-primary" style="background: #113638; color: #f5a623; text-decoration: none; padding: 10px 20px; font-weight: bold; border-radius: 8px;">فتح الدراسة الاستشارية الكاملة ←</a>
+                </div>
+            </div>
+
+            
             <!-- PROPOSALS TAB -->
             <div id="proposals-tab" class="tab-content">
                 <!-- Printable Official Header -->
@@ -12893,6 +12995,9 @@ function loadTab(tabId) {
         document.getElementById("analysis-tab").classList.add("active");
         document.getElementById("nav-analysis").classList.add("active");
         buildFinancialAnalysis();
+    } else if (tabId === "euro-comparison") {
+        document.getElementById("euro-comparison-tab").classList.add("active");
+        document.getElementById("nav-euro-comparison").classList.add("active");
     } else if (tabId === "proposals") {
         document.getElementById("proposals-tab").classList.add("active");
         document.getElementById("nav-proposals").classList.add("active");
