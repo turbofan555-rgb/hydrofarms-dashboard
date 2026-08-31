@@ -1305,6 +1305,12 @@ html[dir="rtl"], body[dir="rtl"] {
                             <span id="text-overview">لوحة التحكم الرئيسية</span>
                         </button>
                     </li>
+                    <li class="nav-item" id="nav-proposals">
+                        <button onclick="loadTab('proposals')">
+                            <span style="font-size: 16px;">📜</span>
+                            <span id="text-proposals">العروض الفنية والمالية</span>
+                        </button>
+                    </li>
                     <li class="nav-item" id="nav-analysis">
                         <button onclick="loadTab('analysis')">
                             <span style="font-size: 16px;">💰</span>
@@ -1519,6 +1525,170 @@ html[dir="rtl"], body[dir="rtl"] {
                 </div>
                 <div class="gallery-grid" id="gallery-grid-container">
                     <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- PROPOSALS TAB -->
+            <div id="proposals-tab" class="tab-content">
+                <div class="panel" style="margin-bottom: 24px; background: linear-gradient(135deg, #fff, #e6f4f5); border-left: 6px solid #36999f;">
+                    <h2 style="font-size: 24px; color: #36999f; margin-bottom: 8px;">📜 حزمة العروض الفنية والمالية — Hydrofarms Turnkey EPC Proposals</h2>
+                    <p style="color: #666; font-size: 14px;">4 عروض مخصصة للمشروع (عرض فني مختصر، عرض فني تفصيلي، عرض مالي مختصر، وعرض سعر مالي مفصل للعميل)</p>
+                </div>
+
+                <!-- Proposals Sub-Navigation Buttons -->
+                <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
+                    <button class="btn-primary" onclick="showSubProposal('prop-tech-exec')" id="btn-prop-tech-exec" style="padding: 10px 18px; font-weight: bold; background: #36999f;">📘 عرض فني مختصر</button>
+                    <button class="btn-secondary" onclick="showSubProposal('prop-tech-detail')" id="btn-prop-tech-detail" style="padding: 10px 18px; font-weight: bold;">📗 عرض فني تفصيلي</button>
+                    <button class="btn-secondary" onclick="showSubProposal('prop-fin-exec')" id="btn-prop-fin-exec" style="padding: 10px 18px; font-weight: bold;">📙 عرض مالي مختصر</button>
+                    <button class="btn-secondary" onclick="showSubProposal('prop-fin-detail')" id="btn-prop-fin-detail" style="padding: 10px 18px; font-weight: bold;">📕 عرض سعر تفصيلي (بيع)</button>
+                </div>
+
+                <!-- 1. Technical Executive Proposal -->
+                <div id="prop-tech-exec" class="sub-proposal-content" style="display: block;">
+                    <div class="panel" style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h2 style="color: #36999f; border-bottom: 2px solid #e6f4f5; padding-bottom: 10px; margin-bottom: 16px;">📘 العرض الفني المختصر — Executive Technical Proposal</h2>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
+                            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border-right: 4px solid #36999f;">
+                                <div style="color: #64748b; font-size: 13px;">المساحة الإجمالية</div>
+                                <strong style="font-size: 20px; color: #0f172a;">4,536 م² (1 فدان)</strong>
+                            </div>
+                            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border-right: 4px solid #f5a623;">
+                                <div style="color: #64748b; font-size: 13px;">الطاقة الإنتاجية السنوية</div>
+                                <strong style="font-size: 20px; color: #f5a623;">400,000 – 450,000 رأس</strong>
+                            </div>
+                            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border-right: 4px solid #2ea66a;">
+                                <div style="color: #64748b; font-size: 13px;">نظام الزراعة</div>
+                                <strong style="font-size: 20px; color: #2ea66a;">NFT المغلق Closed-Loop</strong>
+                            </div>
+                            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; border-right: 4px solid #1565c0;">
+                                <div style="color: #64748b; font-size: 13px;">مدة التنفيذ</div>
+                                <strong style="font-size: 20px; color: #1565c0;">16 أسبوعاً (4 أشهر)</strong>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-bottom: 12px; color: #1e293b;">📋 ملخص المكونات الفنية والأنظمة</h3>
+                        <ul style="line-height: 2; color: #334155; margin-bottom: 24px; padding-right: 20px;">
+                            <li><strong>الهيكل المعدني:</strong> هيكل صلب مجلفن بالكامل IncoSteel HDG مقاوم للرياح حتى 120 كم/ساعة مع تغطية بولي إيثيلين 200 ميكرون وبولي كربونات 6مم.</li>
+                            <li><strong>التبريد والتهوية:</strong> 12 مروحة شفط 140سم بشاسيهات منفصلة + بادات تبريد كرتونية 2م × 125م توفر انخفاضاً حرارياً قدره 10–12°C.</li>
+                            <li><strong>نظام الـ NFT:</strong> 78 ترابيزة إنتاج رئيسية + 6 ترابيزات تحضين مع قنوات PVC غذائية معتمدة وطلمبات Grundfos VFD أستانلس ستيل.</li>
+                            <li><strong>التبريد الهيدروليكي:</strong> 4 تشيلرات تبريد محلول بقدرة 15 طن تبريد (TR) للحفاظ على حرارة المحلول بين 18–20°C.</li>
+                            <li><strong>التسميد والتحكم:</strong> وحدة Geneina FertiOne آلي بـ 4 قنوات حقن مع تحكم مغلق بالـ EC/pH ونظام تحكم مناخي ذكي.</li>
+                            <li><strong>الكهرباء والنسق الاحتياطي:</strong> مولد ديزل 150 kVA كاتم للصوت مع لوحة ATS تضمن عدم انقطاع التيار نهائياً.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Technical Detailed Proposal -->
+                <div id="prop-tech-detail" class="sub-proposal-content" style="display: none;">
+                    <div class="panel" style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h2 style="color: #36999f; border-bottom: 2px solid #e6f4f5; padding-bottom: 10px; margin-bottom: 16px;">📗 العرض الفني المفصل — Detailed Technical Specifications</h2>
+                        <p style="color: #64748b; margin-bottom: 20px;">تغطي هذه المواصفات كافة الأكواد والمعايير والمواصفات الفنية للأبواب الـ 16 بالكامل.</p>
+                        
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; margin-bottom: 20px;">
+                            <h4 style="color: #36999f; margin-bottom: 8px;">📜 المرجعيات والأكواد الهندسية المعتمدة</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; font-size: 13px; color: #475569;">
+                                <div>• كود الصوب الأوروبي: EN 13031-1</div>
+                                <div>• كود الصلب: Eurocode 3 (EN 1993)</div>
+                                <div>• الجلفنة بالغمْس: ASTM A123 / ISO 1461</div>
+                                <div>• شبكة المواسير: DIN 8061/8062 & ISO 1452</div>
+                                <div>• السلامة الكهربائية: IEC 60364 & NFPA 70</div>
+                                <div>• البلاستيك الغذائي: FDA / NSF 61</div>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
+                            <div style="padding: 12px; background: #fafafa; border-radius: 8px; border-right: 3px solid #36999f;">
+                                <strong>الأبواب (1، 10، 14) — الهيكل والمدني:</strong> قواعد خرسانية 80×80سم، ممر خرساني مسلّح 2.5م، أعمدة RHS 100×100×4، أقواس CHS 101.6×4، مزاريع أمطار 1.5مم.
+                            </div>
+                            <div style="padding: 12px; background: #fafafa; border-radius: 8px; border-right: 3px solid #2ea66a;">
+                                <strong>الأبواب (7، 8، 9، 11) — التبريد والستائر:</strong> شفاطات 140سم شاسيه خرساني منفصل، بادات 2.0م × 125م، ستائر Svensson 3647 جريدة وترس، صوبة خدمة 18×18م.
+                            </div>
+                            <div style="padding: 12px; background: #fafafa; border-radius: 8px; border-right: 3px solid #f5a623;">
+                                <strong>الأبواب (2، 3، 4، 5، 6، 12، 13) — NFT والمياه والتسميد:</strong> 78 ترابيزة 14.4م بميول 1%، قنوات PVC غذائية، Grundfos CR/CRE VFD SS316، تشيلرات 15TR، محطة RO بقدرة 5م³/ساعة، ووحدة Geneina FertiOne.
+                            </div>
+                            <div style="padding: 12px; background: #fafafa; border-radius: 8px; border-right: 3px solid #1565c0;">
+                                <strong>الأبواب (15، 16) — الكهرباء والتحكم:</strong> مولد ديزل 150 kVA كاتم، لوحة ATS، لوحة MDB 160A، كابلات نحاس مسلحة 4×95مم²، وحساسات مناخ PT100/PAR.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Financial Executive Proposal -->
+                <div id="prop-fin-exec" class="sub-proposal-content" style="display: none;">
+                    <div class="panel" style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h2 style="color: #f5a623; border-bottom: 2px solid #fef3c7; padding-bottom: 10px; margin-bottom: 16px;">📙 العرض المالي المختصر — Executive Financial Proposal</h2>
+                        
+                        <div style="background: linear-gradient(135deg, #1e293b, #0f172a); color: white; padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 24px;">
+                            <div style="color: #94a3b8; font-size: 14px;">إجمالي سعر تقديم الخدمة الموجه للعميل (EPC Turnkey Selling Price)</div>
+                            <div style="font-size: 36px; font-weight: bold; color: #f5a623; margin: 10px 0;">34,841,900.00 EGP</div>
+                            <div style="color: #cbd5e1; font-size: 13px;">(فقط أربعة وثلاثون مليوناً وثمانمائة وواحد وأربعون ألفاً وتسعمائة جنيه مصري)</div>
+                        </div>
+
+                        <h3 style="margin-bottom: 16px;">📊 توزيع القيمة المالي حسب الحزم الرئيسية</h3>
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
+                            <thead>
+                                <tr style="background: #f8fafc; text-align: right;">
+                                    <th style="padding: 12px; border-bottom: 2px solid #e2e8f0;">الحزمة الرئيسية</th>
+                                    <th style="padding: 12px; border-bottom: 2px solid #e2e8f0;">التكلفة الأساسية (ج.م)</th>
+                                    <th style="padding: 12px; border-bottom: 2px solid #e2e8f0;">سعر البيع النهائي (ج.م)</th>
+                                    <th style="padding: 12px; border-bottom: 2px solid #e2e8f0;">النسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px;">🏗️ الهيكل والمدني والتغطية</td><td style="padding: 12px;">12,076,180.00</td><td style="padding: 12px; font-weight: bold; color: #36999f;">14,491,416.00</td><td style="padding: 12px;">41.6%</td></tr>
+                                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px;">💧 منظومة الـ NFT والمياه والتسميد</td><td style="padding: 12px;">8,985,097.00</td><td style="padding: 12px; font-weight: bold; color: #36999f;">10,782,116.40</td><td style="padding: 12px;">31.0%</td></tr>
+                                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px;">⚡ الكهرباء والتحكم والمولد</td><td style="padding: 12px;">5,303,681.40</td><td style="padding: 12px; font-weight: bold; color: #36999f;">6,364,417.68</td><td style="padding: 12px;">18.2%</td></tr>
+                                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px;">❄️ التبريد والتهوية والستائر</td><td style="padding: 12px;">2,267,759.00</td><td style="padding: 12px; font-weight: bold; color: #36999f;">2,721,310.80</td><td style="padding: 12px;">7.8%</td></tr>
+                                <tr style="background: #f8fafc; font-weight: bold;"><td style="padding: 12px;">الإجمالي العام</td><td style="padding: 12px;">29,034,917.40</td><td style="padding: 12px; color: #f5a623; font-size: 16px;">34,841,900.00</td><td style="padding: 12px;">100%</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h3 style="margin-bottom: 16px;">💳 جدول الدفعات والتدفقات المالي (Payment Schedule)</h3>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <div style="background: #f8fafc; padding: 14px; border-radius: 8px; text-align: center; border-top: 3px solid #36999f;">
+                                <div style="font-size: 12px; color: #64748b;">دفعة 1 (مقدمة)</div>
+                                <strong style="font-size: 16px; color: #36999f;">20% (6.96M ج.م)</strong>
+                                <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">عند العقد والاعتمادات</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 14px; border-radius: 8px; text-align: center; border-top: 3px solid #2ea66a;">
+                                <div style="font-size: 12px; color: #64748b;">دفعة 2 (المدني والهيكل)</div>
+                                <strong style="font-size: 16px; color: #2ea66a;">30% (10.45M ج.م)</strong>
+                                <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">عند إنهاء المدني وتوريد الهيكل</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 14px; border-radius: 8px; text-align: center; border-top: 3px solid #f5a623;">
+                                <div style="font-size: 12px; color: #64748b;">دفعة 3 (المعدات)</div>
+                                <strong style="font-size: 16px; color: #f5a623;">30% (10.45M ج.م)</strong>
+                                <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">عند توريد الميكانيكا والكهرباء</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 14px; border-radius: 8px; text-align: center; border-top: 3px solid #1565c0;">
+                                <div style="font-size: 12px; color: #64748b;">دفعة 4 (التركيب)</div>
+                                <strong style="font-size: 16px; color: #1565c0;">15% (5.22M ج.م)</strong>
+                                <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">عند انتهاء التركيبات</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 14px; border-radius: 8px; text-align: center; border-top: 3px solid #7b1fa2;">
+                                <div style="font-size: 12px; color: #64748b;">دفعة 5 (التسليم)</div>
+                                <strong style="font-size: 16px; color: #7b1fa2;">5% (1.74M ج.م)</strong>
+                                <div style="font-size: 11px; color: #94a3b8; margin-top: 4px;">عند التشغيل التجريبي</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Detailed Commercial Offer -->
+                <div id="prop-fin-detail" class="sub-proposal-content" style="display: none;">
+                    <div class="panel" style="background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h2 style="color: #2ea66a; border-bottom: 2px solid #dcfce7; padding-bottom: 10px; margin-bottom: 16px;">📕 عرض السعر المالي المفصل — Itemized Commercial Price Offer</h2>
+                        <p style="color: #64748b; margin-bottom: 16px;">يمكنك الاطلاع والتحميل الكامل لجدول الأسعار التجارية الموجهة للعميل بند ببند عبر ملف التقرير المرفق أو قسم التحميلات.</p>
+                        
+                        <div style="padding: 16px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <strong style="color: #166534; font-size: 16px;">📄 مستند عرض السعر التفصيلي (PDF & Markdown)</strong>
+                                <div style="color: #15803d; font-size: 13px;">يتضمن 16 باباً مفصلاً مع المارك أب التجاري ومجمل أسعار البيع لكل بند.</div>
+                            </div>
+                            <a href="detailed_commercial_price_offer.md" target="_blank" class="btn-primary" style="background: #2ea66a; text-decoration: none; padding: 10px 20px; font-weight: bold;">فتح العرض التفصيلي ←</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -12352,6 +12522,9 @@ function loadTab(tabId) {
         document.getElementById("analysis-tab").classList.add("active");
         document.getElementById("nav-analysis").classList.add("active");
         buildFinancialAnalysis();
+    } else if (tabId === "proposals") {
+        document.getElementById("proposals-tab").classList.add("active");
+        document.getElementById("nav-proposals").classList.add("active");
     } else if (tabId === "load-schedule") {
         document.getElementById("load-schedule-tab").classList.add("active");
         document.getElementById("nav-load-schedule").classList.add("active");
@@ -14023,6 +14196,36 @@ function exportFullReportPDF() {
     const reportWindow = window.open('', '_blank');
     reportWindow.document.write(html);
     reportWindow.document.close();
+}
+
+
+function showSubProposal(subId) {
+    document.querySelectorAll('.sub-proposal-content').forEach(el => el.style.display = 'none');
+    const target = document.getElementById(subId);
+    if (target) target.style.display = 'block';
+
+    const btnMap = {
+        'prop-tech-exec': 'btn-prop-tech-exec',
+        'prop-tech-detail': 'btn-prop-tech-detail',
+        'prop-fin-exec': 'btn-prop-fin-exec',
+        'prop-fin-detail': 'btn-prop-fin-detail'
+    };
+
+    Object.values(btnMap).forEach(bId => {
+        const b = document.getElementById(bId);
+        if (b) {
+            b.style.background = 'white';
+            b.style.color = '#334155';
+            b.style.border = '1px solid #cbd5e1';
+        }
+    });
+
+    const activeBtn = document.getElementById(btnMap[subId]);
+    if (activeBtn) {
+        activeBtn.style.background = '#36999f';
+        activeBtn.style.color = 'white';
+        activeBtn.style.border = 'none';
+    }
 }
 
 </script>
